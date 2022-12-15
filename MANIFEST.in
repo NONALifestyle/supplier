@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include nona_supplier *.css
+recursive-include nona_supplier *.csv
+recursive-include nona_supplier *.html
+recursive-include nona_supplier *.ico
+recursive-include nona_supplier *.js
+recursive-include nona_supplier *.json
+recursive-include nona_supplier *.md
+recursive-include nona_supplier *.png
+recursive-include nona_supplier *.py
+recursive-include nona_supplier *.svg
+recursive-include nona_supplier *.txt
+recursive-exclude nona_supplier *.pyc
