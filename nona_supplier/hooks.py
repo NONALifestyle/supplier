@@ -28,6 +28,18 @@ app_license = "MIT"
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
 
+# setup wizard
+setup_wizard_requires = "assets/nona_supplier/js/setup_wizard.js"
+setup_wizard_stages = "nona_supplier.setup.setup_wizard.setup_wizard.get_setup_stages"
+setup_wizard_test = (
+    "nona_supplier.setup.setup_wizard.test_setup_wizard.run_setup_wizard_test"
+)
+
+before_install = "nona_supplier.setup.install.check_setup_wizard_not_completed"
+after_install = "nona_supplier.setup.install.after_install"
+
+before_tests = "nona_supplier.setup.utils.before_tests"
+
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -42,7 +54,7 @@ app_license = "MIT"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Role": "home_page"
 # }
 
 # Generators
@@ -56,8 +68,8 @@ app_license = "MIT"
 
 # add methods and filters to jinja environment
 # jinja = {
-#	"methods": "nona_supplier.utils.jinja_methods",
-#	"filters": "nona_supplier.utils.jinja_filters"
+# 	"methods": "nona_supplier.utils.jinja_methods",
+# 	"filters": "nona_supplier.utils.jinja_filters"
 # }
 
 # Installation
@@ -83,11 +95,11 @@ app_license = "MIT"
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
 #
 # has_permission = {
-#	"Event": "frappe.desk.doctype.event.event.has_permission",
+# 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
 # DocType Class
@@ -95,7 +107,7 @@ app_license = "MIT"
 # Override standard doctype classes
 
 # override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
+# 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
 # Document Events
@@ -103,32 +115,32 @@ app_license = "MIT"
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+# 	"*": {
+# 		"on_update": "method",
+# 		"on_cancel": "method",
+# 		"on_trash": "method"
+# 	}
 # }
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-#	"all": [
-#		"nona_supplier.tasks.all"
-#	],
-#	"daily": [
-#		"nona_supplier.tasks.daily"
-#	],
-#	"hourly": [
-#		"nona_supplier.tasks.hourly"
-#	],
-#	"weekly": [
-#		"nona_supplier.tasks.weekly"
-#	],
-#	"monthly": [
-#		"nona_supplier.tasks.monthly"
-#	],
+# 	"all": [
+# 		"nona_supplier.tasks.all"
+# 	],
+# 	"daily": [
+# 		"nona_supplier.tasks.daily"
+# 	],
+# 	"hourly": [
+# 		"nona_supplier.tasks.hourly"
+# 	],
+# 	"weekly": [
+# 		"nona_supplier.tasks.weekly"
+# 	],
+# 	"monthly": [
+# 		"nona_supplier.tasks.monthly"
+# 	],
 # }
 
 # Testing
@@ -140,14 +152,14 @@ app_license = "MIT"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "nona_supplier.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "nona_supplier.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-#	"Task": "nona_supplier.task.get_dashboard_data"
+# 	"Task": "nona_supplier.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -159,29 +171,29 @@ app_license = "MIT"
 # --------------------
 
 # user_data_fields = [
-#	{
-#		"doctype": "{doctype_1}",
-#		"filter_by": "{filter_by}",
-#		"redact_fields": ["{field_1}", "{field_2}"],
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_2}",
-#		"filter_by": "{filter_by}",
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_3}",
-#		"strict": False,
-#	},
-#	{
-#		"doctype": "{doctype_4}"
-#	}
+# 	{
+# 		"doctype": "{doctype_1}",
+# 		"filter_by": "{filter_by}",
+# 		"redact_fields": ["{field_1}", "{field_2}"],
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_2}",
+# 		"filter_by": "{filter_by}",
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_3}",
+# 		"strict": False,
+# 	},
+# 	{
+# 		"doctype": "{doctype_4}"
+# 	}
 # ]
 
 # Authentication and authorization
 # --------------------------------
 
 # auth_hooks = [
-#	"nona_supplier.auth.validate"
+# 	"nona_supplier.auth.validate"
 # ]
