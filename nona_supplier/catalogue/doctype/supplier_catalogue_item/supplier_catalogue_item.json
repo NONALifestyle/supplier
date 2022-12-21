@@ -7,7 +7,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "item_name"
+  "item_name",
+  "stock_uom",
+  "disabled"
  ],
  "fields": [
   {
@@ -16,11 +18,23 @@
    "in_list_view": 1,
    "label": "Item Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "stock_uom",
+   "fieldtype": "Link",
+   "label": "Default Unit of Measurement",
+   "options": "UOM"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-20 18:00:54.080913",
+ "modified": "2022-12-21 14:29:52.629575",
  "modified_by": "Administrator",
  "module": "Catalogue",
  "name": "Supplier Catalogue Item",
@@ -41,5 +55,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
